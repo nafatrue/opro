@@ -1,0 +1,1258 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import "fonts";
+@import "mixins";
+
+html, body {
+	height: 100%;
+	//overflow: hidden;
+	//overflow-x: hidden;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+
+.slider-border1 {
+		width: 47%;
+		position: absolute;
+		height: 4px;
+		z-index: 1;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7ae5f4+0,7ae5f4+24,7ae5f4+47,03b4cd+67,016f7e+100 */
+		background: #7ae5f4; /* Old browsers */
+		background: -moz-linear-gradient(left,  #7ae5f4 0%, #7ae5f4 24%, #7ae5f4 47%, #03b4cd 67%, #016f7e 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  #7ae5f4 0%,#7ae5f4 24%,#7ae5f4 47%,#03b4cd 67%,#016f7e 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  #7ae5f4 0%,#7ae5f4 24%,#7ae5f4 47%,#03b4cd 67%,#016f7e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ae5f4', endColorstr='#016f7e',GradientType=1 ); /* IE6-9 */
+	}
+
+	.slider-triangle {
+			position: absolute;
+			width: 0; 
+  			height: 0; 
+  			margin-left: 0;
+			margin-right: 0;
+			left: 0;
+			margin: auto;
+			right: 0;
+  			border-left: 60px solid transparent;
+  			border-right: 60px solid transparent; 
+  			border-top: 30px solid #f1f5f8;
+  			z-index: 3;
+	}
+
+	.slider-triangle2 {
+			position: absolute;
+			width: 0; 
+  			height: 0; 
+  			margin-left: 0;
+			margin-right: 0;
+			left: 0;
+			margin: auto;
+			right: 0;
+  			border-left: 70px solid transparent;
+  			border-right: 70px solid transparent; 
+  			border-top: 35px solid #016f7e;
+  			z-index: 2;
+	}
+
+	.slider-border2 {
+		width: 47%;
+		position: absolute;
+		height: 4px;
+		z-index: 1;
+		right: 0;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#016f7e+0,03b4cd+33,7ae5f4+53,7ae5f4+76,7ae5f4+100 */
+		background: #016f7e; /* Old browsers */
+		background: -moz-linear-gradient(left,  #016f7e 0%, #03b4cd 33%, #7ae5f4 53%, #7ae5f4 76%, #7ae5f4 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  #016f7e 0%,#03b4cd 33%,#7ae5f4 53%,#7ae5f4 76%,#7ae5f4 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  #016f7e 0%,#03b4cd 33%,#7ae5f4 53%,#7ae5f4 76%,#7ae5f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#016f7e', endColorstr='#7ae5f4',GradientType=1 ); /* IE6-9 */
+}
+
+.mCSB_inside>.mCSB_container {
+	margin-right: 0 !important;
+}
+
+.mCSB_dragger_bar {
+	background: #02899c !important;
+}
+
+.mCSB_draggerRail {
+	opacity: .2 !important;
+}
+
+header {
+	@include clearfix;
+	max-width: 970px;
+	min-width: 970px;
+	margin: auto;
+	padding-top: 10px;
+	.logo {
+		display: block;
+		@include imageUrl("logo.png");
+		width: 187px;
+		height: 49px;
+		float: left;
+	}
+
+	p {
+		font-family: $mainFont;
+		color: $darkCoin;
+		float: left;
+		font-size: 18px;
+		margin-left: 25px;
+		margin-top: 20px;
+	}
+
+	nav {
+		float: right;
+		margin-top: 20px;
+
+		ul {
+			li {
+				display: inline-block;
+				padding-left: 15px;
+				border-bottom: 3px solid $lessDarkCoin;
+				border-bottom-style: dotted;
+
+				&:hover {
+					border-bottom: 3px solid $orangeCoin;
+					border-bottom-style: dotted;
+
+				}
+
+				&:first-child {
+					margin-right: 15px;
+				}
+
+				&:nth-child(2) {
+					padding-left: 0;
+				}
+
+				&:last-child {
+					padding-left: 0;
+					margin-left: 15px;
+					padding-right: 15px;
+				}
+
+				a {
+					font-family: $mainFont;
+					font-size: 20px;
+					color: $darkCoin;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+button.type1 {
+	background: $orangeCoin;
+	font-family: $mainFont;
+	color: #fff;
+	border: none;
+	text-align: center;
+	padding: 10px 15px 10px 15px;
+	outline: none;
+	letter-spacing: -0.3px;
+	cursor: pointer;
+	font-size: 18px;
+
+	&:hover {
+		background: #fe8402;
+	}
+}
+
+.join_us  {
+	@include clearfix;
+	clear: both;
+	margin-top: 5px;
+	border-top: 3px solid $orangeCoin;
+	min-height: 278px;
+	position: relative;
+	height: 0;
+	padding-top: 29.7%;
+	box-sizing: border-box;
+	background-size: 103% auto;
+	background-repeat: no-repeat;
+	@include imageUrl("top-view.png");
+	background-position: -15px -50px;
+	min-width: 970px;
+
+
+	&-block {
+		max-width: 720px;
+		min-width: 720px;
+		position: absolute;
+		top: 25px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+    	padding: 10px;
+		background: #fff;
+		background-color: rgba(255, 255, 255, .53);
+
+		h1 {
+			font-family: $mainFont;
+			font-weight: 600;
+			font-size: 28px;
+			color: $darkCoin2;
+			text-transform: uppercase;
+		}
+
+		p {
+			font-family: $mainFont;
+			text-transform: uppercase;
+			font-size: 28px;
+			font-weight: 300;
+			padding-top: 20px;
+			color: $darkCoin2;
+
+			span {
+				color: $orangeCoin;
+				font-size: 35px;
+				font-weight: 600;
+			}
+		}
+	}
+
+	&-button {
+		max-width: 80%;
+		min-width: 970px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+		padding-bottom: 25px;
+		border-bottom:  3px solid $orangeCoin;
+	}
+
+}
+
+.what_is {
+	background-color: #f1f5f8;
+	overflow: hidden;
+	&-content {
+		padding-top: 25px;
+		min-width: 970px;
+		max-width: 970px;
+		margin: auto;
+	}
+
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $mainFont;
+		font-size: 28px;
+		color: $darkCoin2;
+
+		span {
+			font-weight: 600;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			padding-top: 10px;
+			width: 100px;
+			border-bottom: 3px solid $orangeCoin;
+			margin: auto;
+		}
+	}
+
+	.advantages-bg {
+		@include imageUrl("advantages.png");
+		float: left;
+		width: 463px;
+		height: 326px;
+	}
+
+	p {
+		display: block;
+		font-family: $mainFont;
+		position: relative;
+		right: 15px;
+		margin-top: 50px;
+	}
+}
+
+.advantages {
+	padding-top: 50px;
+	background-color: #f1f5f8;
+	padding-bottom: 50px;
+
+
+	&-content {
+		min-width: 970px;
+		max-width: 970px;
+		margin: auto;
+
+		h1 {
+			text-align: center;
+			font-family: $mainFont;
+			color: $darkCoin2;
+			font-weight: 600;
+			font-size: 22px;
+			text-transform: uppercase;
+
+			span {
+				font-weight: 400;
+			}
+		}
+	}
+
+	&-list {
+		padding-top: 25px;
+		text-align: center;
+		.advantages-list-item {
+			display: inline-block;
+			margin-right: 25px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+			.adv-pic1 {
+				margin: auto;
+				@include imageUrl("advantages-sprite.png");
+				width: 52px;
+				height: 52px;
+				margin-bottom: 25px;
+			}
+
+			h2 {
+				text-transform: uppercase;
+				font-family: $mainFont;
+				font-size: 18px;
+				color: $orangeCoin2;
+			}
+
+			p {
+				font-family: $mainFont;
+				padding-top: 5px;
+				width: 250px;
+				color: $description-text;
+				margin: auto;
+			}
+
+			&:nth-child(2) {
+				.adv-pic2 {
+					margin: auto;
+					@include imageUrl("advantages-sprite.png");
+					background-position: -52px 0;
+					width: 62px;
+					height: 62px;
+					margin-bottom: 25px;
+
+				}
+
+				p {
+					width: 350px;
+				}
+			}
+
+			&:nth-child(3) {
+				position: relative;
+				top: -16px;
+				.adv-pic3 {
+					margin: auto;
+					@include imageUrl("advantages-sprite.png");
+					background-position: 35px 0;
+					width: 35px;
+					height: 56px;
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+}
+
+.slider {
+	@include clearfix;
+	position: relative;
+	min-width: 960px;
+	&-header {
+		position: absolute;
+		margin-left: 0;
+		margin-right: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		top: 50px;
+		text-align: center;
+
+	}
+
+	
+
+	h1 {
+		background: #f1f5f8;
+		display: inline-block;
+		padding: 15px 5px 15px 5px;
+		font-family: $mainFont;
+		font-size: 24px;
+		color: $darkCoin2;
+		text-transform: uppercase;
+		font-weight: 600;
+
+		span {
+			color: $orangeCoin;
+			font-size: 30px;
+		}
+	}
+}
+
+.future-block {
+	min-width: 970px;
+	max-width: 970px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 35px;
+	@include clearfix;
+
+
+	h1 {
+		font-family: $mainFont;
+		font-size: 30px;
+		text-transform: uppercase;
+		text-align: center;
+		color: $orangeCoin;
+		font-weight: 600;
+		margin-bottom: 35px;
+
+		span:nth-of-type(1) {
+			color: $darkCoin2;
+			font-weight: 600;	
+		}
+
+		span:nth-of-type(2) {
+			color: $darkCoin2;
+			font-weight: 400;	
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			margin: auto;
+			margin-top: 10px;
+			width: 100px;
+			border-top: 3px solid $orangeCoin2;
+		}
+	}
+
+	&-left {
+		width: 60%;
+		float: left;
+
+		p {
+			font-family: $mainFont;
+			font-size: 18px;
+			line-height: 1.3;
+		}
+	}
+
+	&-right {
+		float: right;
+
+		.future-pic {
+			@include imageUrl("future.jpg");
+			width: 374px;
+			height: 214px;
+		}
+	}
+}
+
+.interesting-facts {
+	min-width: 970px;
+	max-width: 970px;
+	margin: auto;
+	margin-top: 50px;
+	@include clearfix;
+
+	h1 {
+		font-family: $mainFont;
+		text-transform: uppercase;
+		font-size: 30px;
+		color: $darkCoin2;
+		text-align: center;
+		padding-bottom: 35px;
+
+		span:nth-of-type(1) {
+			font-weight: 600;
+		}
+
+
+		span:nth-of-type(2) {
+			color: $orangeCoin;
+			font-weight: 600;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			margin: auto;
+			margin-top: 10px;
+			width: 100px;
+			border-top: 3px solid $orangeCoin2;
+		}
+	}
+
+	.scrollme {
+		clear: both;
+	}
+
+	.facts-block {
+			&-item {
+				width: 33.3%;
+				display: inline-block;
+				float: left;
+				padding-bottom: 50px;
+
+				.fact-img {
+					width: 143px;
+					height: 143px;
+					margin: auto;
+				}
+
+				.fact-1 {
+					@include imageUrl("fact1.png");
+				}
+
+				.fact-2 {
+					@include imageUrl("fact2.png");
+				}
+
+				.fact-3 {
+					@include imageUrl("fact3.png");
+				}
+
+			}
+
+			&-item:nth-child(4) {
+				clear: both;
+			}
+
+			p {
+				font-family: $mainFont;
+				color: #000;
+				font-size: 18px;
+				text-align: center;
+				width: 265px;
+				margin: auto;
+				padding-top: 15px;
+
+				span {
+					color: $darkCoin2;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	.statistic-parallax {
+			min-width: 970px;
+			//height: 100%;
+			position: relative;
+			clear: both;
+			@include clearfix;
+    		.statistic-image {
+				//@include imageUrl("statistic-parallax.jpg");
+				background: #fff url(../../images/statistic-parallax.jpg) no-repeat;
+				//height: 100%;
+				height: 1020px;
+				    /* Create the parallax scrolling effect */
+   				background-attachment: fixed;
+    			background-position: 0;
+    			background-repeat: no-repeat;
+    			background-size: cover;
+    			text-align: center;
+    			position: relative;
+
+
+		.slider-border3 {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 4px;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7ae5f4+0,03b4cd+24,016f7e+51,03b4cd+79,7ae5f4+100 */
+			background: #7ae5f4; /* Old browsers */
+			background: -moz-linear-gradient(left,  #7ae5f4 0%, #03b4cd 24%, #016f7e 51%, #03b4cd 79%, #7ae5f4 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left,  #7ae5f4 0%,#03b4cd 24%,#016f7e 51%,#03b4cd 79%,#7ae5f4 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right,  #7ae5f4 0%,#03b4cd 24%,#016f7e 51%,#03b4cd 79%,#7ae5f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ae5f4', endColorstr='#7ae5f4',GradientType=1 ); /* IE6-9 */
+
+		}
+
+    			h1 {
+    				text-align: center;
+    				margin-top: 50px;
+    				background: #f2f2f2;
+    				width: 400px;
+    				text-transform: uppercase;
+    				margin: auto;
+    				padding: 15px 10px 15px 10px;
+    				font-family: $mainFont;
+    				color: $darkCoin2;
+    				font-size: 30px;
+    				position: relative;
+    				top: 50px;
+
+    				span {
+    					font-weight: 600;
+    				}
+    			}
+
+    			img {
+    				display: block;
+    				margin: auto;
+    			}
+
+    			#fstat {
+    				margin-top: 80px;
+    			}
+
+    			#sstat {
+    				margin-top: 30px;
+    			}
+		}
+
+		.scrollme {
+			width: 777px;
+			margin: auto;
+		}
+
+		.slider-triangle {
+			 border-top: 30px solid #fff;
+		}
+	}
+
+.how-works {
+	clear: both;
+	@include clearfix;
+	position: relative;
+	@include imageUrl("how-it-works-bg.png");
+	background-position: -15px;
+	height: 418px;
+	width: 100%;
+	min-width: 970px;
+
+	h1 {
+		text-transform: uppercase;
+		font-family: $mainFont;
+		text-align: center;
+		padding-top: 50px;
+		font-size: 28px;
+		color: $darkCoin2;
+
+		span {
+			font-weight: 600;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			margin: auto;
+			margin-top: 10px;
+			width: 100px;
+			border-top: 3px solid $orangeCoin;
+		}
+	}
+
+	&-block {
+		padding-top: 70px;
+		min-width: 970px;
+		max-width: 970px;
+		margin: auto;
+		text-align: center;
+
+		.x {
+			position: relative;
+			top: 18px;
+		}
+
+		&-item {
+			display: inline-block;
+			text-align: center;
+			width: 190px;
+
+			.how {
+				margin-bottom: 30px !important;
+
+				&:hover + .how-title {
+			        color: $darkCoin2;
+			        text-transform: uppercase;
+			        transition: .3s;
+
+			    }
+
+			    &:hover ~ .how-about {
+			    	opacity: 1;
+			    	transition: .3s;
+			    }
+
+			}
+
+			.how1 {
+				width: 53px;
+				height: 51px;
+				@include imageUrl("how-it-works-sprite.png");
+				margin-left: 30px;
+				margin-right: 30px;
+				cursor: pointer;
+				margin: auto;
+
+				&::after {
+					content: "";
+					display: block;
+					@include imageUrl("how-it-works-arrow1.png");
+					width: 63px;
+					height: 16px;
+					position: relative;
+					top: 25px;
+					cursor: default;
+					margin-left: 90px;
+				}
+			}
+
+
+			span {	
+					text-transform: uppercase;
+					font-family: $mainFont;
+					color: #fff;
+					background: $orangeCoin;
+					font-weight: 500;
+					font-size: 18px;
+					padding-left: 25px;
+					padding-right: 25px;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					margin: auto;
+					margin-right: 15px;
+			}
+
+			.how-title {
+				font-size: 18px;
+				text-align: center;
+				font-family: $mainFont;
+				color: $orangeCoin2;
+				font-weight: 600;
+				transition: .3s;
+				width: 170px;
+				margin: auto;
+			}
+
+			.how-about {
+				display: block;
+			    transition: .3s;
+				position: absolute;
+				font-family: $mainFont;
+				font-weight: 300;
+				font-size: 14px;
+				padding-top: 10px;
+				width: 170px;
+				margin: auto;
+				left: 0;
+				right: 0;
+				opacity: 0;
+				text-align: center;
+			}
+
+			.how2 {
+				width: 60px;
+				height: 51px;
+				@include imageUrl("how-it-works-sprite.png");
+				background-position: -50px;
+				margin-left: 30px;
+				margin-right: 30px;
+				cursor: pointer;
+				margin: auto;
+
+				&::after {
+					content: "";
+					@include imageUrl("how-it-works-arrow2.png");
+					width: 65px;
+					height: 14px;
+					float: left;
+					position: relative;
+					display: block;
+					cursor: default;
+					top: 25px;
+					margin-left: 90px;
+				}
+
+
+			}
+
+			.how3 {
+				width: 60px;
+				height: 51px;
+				@include imageUrl("how-it-works-sprite.png");
+				background-position: -110px;
+				margin-left: 30px;
+				margin-right: 30px;
+				cursor: pointer;
+				margin: auto;
+
+
+				&::after {
+					content: "";
+					@include imageUrl("how-it-works-arrow3.png");
+					width: 63px;
+					height: 16px;
+					float: left;
+					position: relative;
+					cursor: default;
+					display: block;
+					top: 25px;
+					margin-left: 90px;	
+				}
+			}
+
+			.how4 {
+				width: 60px;
+				height: 51px;
+				@include imageUrl("how-it-works-sprite.png");
+				background-position: -180px;
+				margin-left: 30px;
+				margin-right: 30px;
+				cursor: pointer;
+				margin: auto;
+
+				&::after {
+					content: "";
+					@include imageUrl("how-it-works-arrow2.png");
+					cursor: default;
+					width: 65px;
+					height: 14px;
+					float: left;
+					position: relative;
+					display: block;
+					top: 25px;
+					margin-left: 90px;	
+				}
+			}
+
+			.how5 {
+				width: 60px;
+				height: 50px;
+				@include imageUrl("how-it-works-sprite.png");
+				background-position: -240px -0.2px;
+				margin-left: 30px;
+				margin-right: 30px;
+				cursor: pointer;
+				margin: auto;
+
+			}
+		}
+	}
+}
+
+.video-part {
+	position: relative;
+	@include clearfix;
+
+	.slider-border1 {
+		top:-32px;
+	}
+
+	.slider-triangle {
+		top: -32px;
+
+	}
+
+	.slider-triangle2 {
+		top: -32px;
+	}
+
+	.slider-border2 {
+		top: -32px;
+	}
+
+	h1 {
+			text-align: center;
+			font-family: $mainFont;
+			color: $orangeCoin;
+			font-weight: 600;
+			padding-top: 25px;
+			font-size: 30px;
+			text-transform: uppercase;
+
+			span {
+				font-weight: 400;
+				color: $darkCoin2;
+			}
+
+		&::after {
+			content: "";
+			display: block;
+			margin: auto;
+			margin-top: 10px;
+			width: 100px;
+			border-top: 3px solid $orangeCoin2;
+		}
+	}
+
+	.video {
+		max-width: 970px;
+		min-width: 970px;
+		margin: auto;
+		margin-top: 50px;
+		@include clearfix;
+
+		.video-item-text {
+			height: 40px;
+			width: 80%;
+			background-color: $darkCoin2;
+			color: #fff;
+			font-family: $mainFont;
+			font-weight: 300;
+			text-transform: uppercase;
+			box-sizing: border-box;
+			font-size: 16px;
+			padding-left: 30px;
+			padding-top: 10px;
+			top: -20px;
+			position: absolute;
+		}
+
+		&-item {
+			float: left;
+			position: relative;
+		}
+
+		&-item2 {
+			float: right;
+			position: relative;
+		}
+	}
+
+	.list {
+		max-width: 970px;
+		min-width: 970px;
+		margin: auto;
+		padding-top: 50px;
+
+		ul {
+			width: 90%;
+			margin: auto;
+			li {
+				font-family: $mainFont;
+				font-family: 18px;
+				line-height: 1.5;
+				color: #494949;
+				float: left;
+
+				span {
+					font-weight: 600;
+				}
+
+				&::before {
+					content: "";
+					display: block;
+					width: 20px;
+					margin-top: 5px;
+					float: left;
+					margin-right: 15px;
+					height: 22px;
+					@include imageUrl("list-icon.png");
+				}
+
+				padding-bottom: 15px;
+			}
+		}
+	}
+}
+
+.packages {
+	margin-top: 50px;
+	@include imageUrl("packages-bg.jpg");
+	background-size: 100% auto;
+	height: 1200px;
+	background-repeat: no-repeat;
+	min-height: 2500px;
+	margin-bottom: 20px;
+
+	background-attachment: fixed;
+
+	h1 {
+		font-family: $mainFont;
+		font-size: 28px;
+		text-align: center;
+		padding-top: 50px;
+		text-transform: uppercase;
+		color: $darkCoin2;
+		
+		span {
+			font-weight: 600;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			margin: auto;
+			margin-top: 10px;
+			width: 100px;
+			border-top: 3px solid $orangeCoin;
+		}
+	}
+
+	.packages-container {
+		min-width: 970px;
+		max-width: 970px;
+		margin: auto;
+		margin-top: 50px;
+	}
+
+	.block {
+		width: 85%;
+		margin: auto;
+	}
+
+	.left {
+		float: left;
+	}
+
+	.right {
+		float: right;
+	}
+
+	.package-item {
+		width: 374px;
+		min-height: 420px;
+		margin-bottom: 50px;
+		background: #fff;
+		box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.49); 
+
+		img {
+			width: 116px;
+			height: 114px;
+			position: relative;
+			right: 20px;
+			float: left;
+			margin-top: -30px;
+		}
+
+		h1 {
+			font-size: 18px;
+			padding-top: 10px;
+			float: left;
+			width: calc(100% - 116px);
+			&::after {
+				width: 100%;
+
+			}
+		}
+
+		p {
+			font-family: $mainFont;
+			position: relative;
+			top: 10px;
+			font-size: 16px;
+			color: #494949;
+			padding-left: 15px;
+			padding-right: 15px;
+			text-justify: center;
+		}
+	}
+}
+
+.questions {
+	min-width: 970px;
+	min-width: 970px;
+	margin: auto;
+	text-align: center;
+
+	button {
+		padding-left: 50px;
+		padding-right: 50px;
+		background: $orangeCoin2;
+
+		&:hover {
+			background: $darkCoin2;
+		}
+	}
+
+	p {
+		font-family: $mainFont;
+		font-size: 23px;
+		margin-top: 50px;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: $darkCoin2;
+	}
+
+	.tel {
+		font-family: $mainFont;
+		color: #494949;
+		font-size: 16px;
+	}
+
+	span {
+		padding-top: 10px;
+		display: block;
+		font-family: $mainFont;
+		color: $darkCoin2;
+		font-size: 24px;
+
+		b {
+			font-weight: 600;
+		}
+
+		a {
+			text-decoration: underline;
+			color: $orangeCoin2;
+			font-weight: 600;
+			cursor: pointer;
+		}
+	}
+
+	span:nth-of-type(2) {
+		padding-top: 15px;
+		padding-bottom: 5px;
+	}
+
+	span:last-child {
+		padding-bottom: 30px;
+	}
+}
+
+footer {
+	height: 60px;
+	position: relative;
+	.footer-content {
+		min-width: 970px;
+		max-width: 970px;
+		margin: auto;
+	}
+.slider-border3 {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 4px;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7ae5f4+0,03b4cd+24,016f7e+51,03b4cd+79,7ae5f4+100 */
+			background: #7ae5f4; /* Old browsers */
+			background: -moz-linear-gradient(left,  #7ae5f4 0%, #03b4cd 24%, #016f7e 51%, #03b4cd 79%, #7ae5f4 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left,  #7ae5f4 0%,#03b4cd 24%,#016f7e 51%,#03b4cd 79%,#7ae5f4 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right,  #7ae5f4 0%,#03b4cd 24%,#016f7e 51%,#03b4cd 79%,#7ae5f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ae5f4', endColorstr='#7ae5f4',GradientType=1 ); /* IE6-9 */
+
+		}
+	a {
+		display: block;
+		@include imageUrl("logo.png");
+		width: 187px;
+		height: 49px;
+		margin-top: 10px;
+		margin-bottom: 5px;
+		float: left;
+	}
+
+	span {
+		padding-top: 20px;
+		font-family: $mainFont;
+		font-size: 23px;
+		float: right;
+		color: $darkCoin2;
+
+		b {
+			font-weight: 600;
+		}
+	}
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, .5);
+	z-index: 5;
+
+	.dialog {
+		position: fixed;
+		border: 2px solid $orangeCoin;
+		@include border-radius(5px);
+		top: 50%;
+		left: 50%;
+		margin-top: -145px; /* Negative half of height. */
+		margin-left: -170px; /* Negative half of width. */
+		background: #fff;
+		width: 340px;
+		height: 290px;
+		text-align: center;
+		padding-left: 20px;
+		display: none;
+		padding-right: 20px;
+	}
+
+
+	.close {
+		position: absolute;
+		top: 0;
+		right: -50px;
+		width: 40px;
+		height: 40px;
+		background: $darkCoin2;
+		cursor: pointer;
+
+		&::after {
+			content: "";
+			display: block;
+			@include imageUrl("close-icon.png");
+			width: 14px;
+			height: 12px;
+			background-size: 100% auto;  
+			margin-left: 13px;
+			margin-top: 12px;
+		}
+	}
+
+	h1 {
+		font-family: $mainFont;
+		font-size: 18px;
+		text-transform: uppercase;
+		padding-top: 15px;
+		font-weight: 600;
+		color: $darkCoin2;
+		text-align: center;
+	}
+
+	.inp_wrap {
+		margin-top: 40px;
+	}
+
+	input {
+		margin: auto;
+		width: 80%;
+		box-sizing: border-box;
+		padding-left: 15px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+
+	input:nth-of-type(2) {
+		margin-top: 25px;
+	}
+
+	input:nth-of-type(3) {
+		margin-top: 20px;
+	}
+
+	[type='submit'] {
+		background: $orangeCoin2;
+		color: #fff;
+		text-transform: uppercase;
+		border: none;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		cursor: pointer;
+		font-weight: 600;
+		margin-top: 20px;
+	}
+}
